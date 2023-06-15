@@ -1,14 +1,13 @@
-class Student4 {
-  String name;
-  static int counter = 0;
+public final class Student4 extends Person4 {
+  private int stuNo;
 
-  Student4(String n) {
-    name = n;
-    counter++;
-    System.out.println(name + "さんをインスタンス化しました");
+  public Student4(String name, int stuNo) {
+    super(name);
+    this.stuNo = stuNo;
   }
 
-  static void display() {
-    System.out.println(counter + "人です");
+  public void display() {
+    super.display();
+    System.out.println("学籍番号：" + stuNo);
   }
 }
